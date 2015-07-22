@@ -59,7 +59,7 @@ Public Class FormMain
         Application.Exit()
     End Sub
 
-    Private Sub SourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SourceToolStripMenuItem.Click
+    Private Shared Sub SourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SourceToolStripMenuItem.Click
         DialogViewSource.Show()
     End Sub
 
