@@ -16,7 +16,6 @@
 'LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 'SOFTWARE.
-
 Public Class FormMain
 
     Dim _chronoStarted As Boolean = False
@@ -48,7 +47,7 @@ Public Class FormMain
         _tempsFin = Now
     End Sub
 
-    Private Sub ÀproposdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÀproposdeToolStripMenuItem.Click
+    Private Shared Sub AproposdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÀproposdeToolStripMenuItem.Click
         AboutBox1.Show()
     End Sub
 
@@ -69,6 +68,6 @@ Public Class FormMain
             _tempsFin = Now
             LabelCompteur.Text = (_tempsFin - _tempsDepart).ToString
             LabelCompteur.Refresh()
-    End If
-  End Sub
+        End If
+    End Sub
 End Class
