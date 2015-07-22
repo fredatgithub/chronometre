@@ -19,56 +19,56 @@
 
 Public Class FormMain
 
-  Dim chronoStarted As Boolean = False
-  Dim tempsDepart As New Date
-  Dim tempsFin As New Date
-  Private Sub ButtonReset_Click(sender As Object, e As EventArgs) Handles ButtonReset.Click
-    LabelCompteur.Text = "00:00:00:0000000"
-  End Sub
+    Dim _chronoStarted As Boolean = False
+    Dim _tempsDepart As New Date
+    Dim _tempsFin As New Date
+    Private Sub ButtonReset_Click(sender As Object, e As EventArgs) Handles ButtonReset.Click
+        LabelCompteur.Text = "00:00:00:0000000"
+    End Sub
 
-  Private Sub ButtonStart_Click(sender As Object, e As EventArgs) Handles ButtonStart.Click
-    If chronoStarted Then
-      chronoStarted = False
-      ButtonStart.Text = "Start"
-      ButtonReset.Enabled = True
-    Else
-      chronoStarted = True
-      ButtonStart.Text = "Stop"
-      tempsDepart = Now
-      ButtonReset.Enabled = False
-    End If
-  End Sub
+    Private Sub ButtonStart_Click(sender As Object, e As EventArgs) Handles ButtonStart.Click
+        If _chronoStarted Then
+            _chronoStarted = False
+            ButtonStart.Text = "Start"
+            ButtonReset.Enabled = True
+        Else
+            _chronoStarted = True
+            ButtonStart.Text = "Stop"
+            _tempsDepart = Now
+            ButtonReset.Enabled = False
+        End If
+    End Sub
 
-  Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    chronoStarted = False
-    TimerChrono.Enabled = True
-    TimerChrono.Interval = 1
-    LabelCompteur.Text = "00:00:00:0000000"
-    tempsDepart = Now
-    tempsFin = Now
-  End Sub
+    Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        _chronoStarted = False
+        TimerChrono.Enabled = True
+        TimerChrono.Interval = 1
+        LabelCompteur.Text = "00:00:00:0000000"
+        _tempsDepart = Now
+        _tempsFin = Now
+    End Sub
 
-  Private Sub ÀproposdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÀproposdeToolStripMenuItem.Click
-    AboutBox1.Show()
-  End Sub
+    Private Sub ÀproposdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÀproposdeToolStripMenuItem.Click
+        AboutBox1.Show()
+    End Sub
 
-  Private Sub NouveauToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NouveauToolStripMenuItem.Click
-    LabelCompteur.Text = "00:00:00:0000000"
-  End Sub
+    Private Sub NouveauToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NouveauToolStripMenuItem.Click
+        LabelCompteur.Text = "00:00:00:0000000"
+    End Sub
 
-  Private Sub QuitterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitterToolStripMenuItem.Click
-    Application.Exit()
-  End Sub
+    Private Sub QuitterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitterToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
 
-  Private Sub SourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SourceToolStripMenuItem.Click
-    DialogViewSource.Show()
-  End Sub
+    Private Sub SourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SourceToolStripMenuItem.Click
+        DialogViewSource.Show()
+    End Sub
 
-  Private Sub TimerChrono_Tick(sender As Object, e As EventArgs) Handles TimerChrono.Tick
-    If chronoStarted Then
-      tempsFin = Now
-      LabelCompteur.Text = (tempsFin - tempsDepart).ToString
-      LabelCompteur.Refresh()
+    Private Sub TimerChrono_Tick(sender As Object, e As EventArgs) Handles TimerChrono.Tick
+        If _chronoStarted Then
+            _tempsFin = Now
+            LabelCompteur.Text = (_tempsFin - _tempsDepart).ToString
+            LabelCompteur.Refresh()
     End If
   End Sub
 End Class
