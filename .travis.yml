@@ -1,4 +1,4 @@
-configuration: Release
-platform: Any CPU
-build:
-  verbosity: minimal
+language: vb
+solution: chronometre.sln
+notifications:
+  email: false
