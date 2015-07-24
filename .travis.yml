@@ -1,4 +1,4 @@
-language: vb
-solution: chronometre.sln
+language: csharp
+solution: Chronometre.sln
 notifications:
   email: false
