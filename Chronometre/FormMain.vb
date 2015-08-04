@@ -28,13 +28,22 @@ Public Class FormMain
     Private Sub ButtonStart_Click(sender As Object, e As EventArgs) Handles ButtonStart.Click
         If _chronoStarted Then
             _chronoStarted = False
-            ButtonStart.Text = "Start"
             ButtonReset.Enabled = True
+            If FrenchToolStripMenuItem.Checked Then
+                ButtonStart.Text = "Commence"
+                Else
+                ButtonStart.Text = "Start"
+            End If
+            
         Else
             _chronoStarted = True
-            ButtonStart.Text = "Stop"
             _tempsDepart = Now
             ButtonReset.Enabled = False
+            If FrenchToolStripMenuItem.Checked Then
+                ButtonStart.Text = "Arrête"
+                Else
+                ButtonStart.Text = "Stop"
+            End If
         End If
     End Sub
 
@@ -47,15 +56,15 @@ Public Class FormMain
         _tempsFin = Now
     End Sub
 
-    Private Shared Sub AproposdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÀproposdeToolStripMenuItem.Click
+    Private Shared Sub AproposdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         AboutBox1.Show()
     End Sub
 
-    Private Sub NouveauToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NouveauToolStripMenuItem.Click
+    Private Sub NouveauToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem.Click
         LabelCompteur.Text = "00:00:00:0000000"
     End Sub
 
-    Private Sub QuitterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitterToolStripMenuItem.Click
+    Private Sub QuitterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitToolStripMenuItem.Click
         Application.Exit()
     End Sub
 
@@ -69,5 +78,39 @@ Public Class FormMain
             LabelCompteur.Text = (_tempsFin - _tempsDepart).ToString
             LabelCompteur.Refresh()
         End If
+    End Sub
+
+    Private Sub FrenchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FrenchToolStripMenuItem.Click
+        FrenchToolStripMenuItem.Checked = True
+        EnglishToolStripMenuItem.Checked = False
+        FileToolStripMenuItem.Text = "Fichier"
+        ResetToolStripMenuItem.Text = "Mise à zéro"
+        QuitToolStripMenuItem.Text = "Quitter"
+        DisplayToolStripMenuItem.Text = "Afficher"
+        SourceToolStripMenuItem.Text = "Source"
+        LanguageToolStripMenuItem.Text = "Langue"
+        FrenchToolStripMenuItem.Text = "Français"
+        EnglishToolStripMenuItem.Text = "Anglais"
+        HelpToolStripMenuItem.Text = "Aide"
+        AboutToolStripMenuItem.Text = "A propos de"
+        ButtonStart.Text = "Commence"
+        ButtonReset.Text = "Mise à zéro"
+    End Sub
+
+    Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
+        FrenchToolStripMenuItem.Checked = False
+        EnglishToolStripMenuItem.Checked = True
+        FileToolStripMenuItem.Text = "File"
+        ResetToolStripMenuItem.Text = "Reset"
+        QuitToolStripMenuItem.Text = "Quit"
+        DisplayToolStripMenuItem.Text = "Display"
+        SourceToolStripMenuItem.Text = "Source"
+        LanguageToolStripMenuItem.Text = "Language"
+        FrenchToolStripMenuItem.Text = "French"
+        EnglishToolStripMenuItem.Text = "English"
+        HelpToolStripMenuItem.Text = "Help"
+        AboutToolStripMenuItem.Text = "About"
+        ButtonStart.Text = "Start"
+        ButtonReset.Text = "Reset"
     End Sub
 End Class
