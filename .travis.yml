@@ -1,7 +1,7 @@
 language: csharp
 solution: Chronometre.sln
+    LC_CTYPE=fr_FR.UTF-8 xbuild /property:Configuration=Release Chronometre.sln
 script:
   - xbuild /p:Configuration=Release Chronometre/Chronometre.vbproj
-    LC_CTYPE=fr_FR.UTF-8 xbuild /property:Configuration=Release Chronometre.sln
 notifications:
   email: false
