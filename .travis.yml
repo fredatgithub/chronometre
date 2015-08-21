@@ -2,6 +2,6 @@ language: csharp
 solution: Chronometre.sln
 script:
  #xbuild /p:VbcToolExe=vbnc.exe Chronometre.sln
- xbuild /p:VbcToolExe=vbnc.exe chronometre/Chronometre.vbproj
+ xbuild /p:VbcToolExe=vbnc.exe Chronometre/Chronometre.vbproj
 notifications:
   email: false
