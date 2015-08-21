@@ -19,8 +19,8 @@
 Public Class FormMain
     ' TODO translate menus to English inside the exe
     Dim _chronoStarted As Boolean = False
-    Dim _tempsDepart As New Date
-    Dim _tempsFin As New Date
+    Dim _startTime As New Date
+    Dim _endTime As New Date
     Private Sub ButtonReset_Click(sender As Object, e As EventArgs) Handles ButtonReset.Click
         LabelCompteur.Text = "00:00:00:0000000"
     End Sub
@@ -37,7 +37,7 @@ Public Class FormMain
             
         Else
             _chronoStarted = True
-            _tempsDepart = Now
+            _startTime = Now
             ButtonReset.Enabled = False
             If FrenchToolStripMenuItem.Checked Then
                 ButtonStart.Text = "Arrête"
@@ -52,8 +52,8 @@ Public Class FormMain
         TimerChrono.Enabled = True
         TimerChrono.Interval = 1
         LabelCompteur.Text = "00:00:00:0000000"
-        _tempsDepart = Now
-        _tempsFin = Now
+        _startTime = Now
+        _endTime = Now
     End Sub
 
     Private Sub AproposdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -74,8 +74,8 @@ Public Class FormMain
 
     Private Sub TimerChrono_Tick(sender As Object, e As EventArgs) Handles TimerChrono.Tick
         If _chronoStarted Then
-            _tempsFin = Now
-            LabelCompteur.Text = (_tempsFin - _tempsDepart).ToString
+            _endTime = Now
+            LabelCompteur.Text = (_endTime - _startTime).ToString
             LabelCompteur.Refresh()
         End If
     End Sub
