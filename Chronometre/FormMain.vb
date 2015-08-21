@@ -56,7 +56,7 @@ Public Class FormMain
         _tempsFin = Now
     End Sub
 
-    Private Shared Sub AproposdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+    Private Sub AproposdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         AboutBox1.Show()
     End Sub
 
@@ -68,7 +68,7 @@ Public Class FormMain
         Application.Exit()
     End Sub
 
-    Private Shared Sub SourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SourceToolStripMenuItem.Click
+    Private Sub SourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SourceToolStripMenuItem.Click
         DialogViewSource.Show()
     End Sub
 
