@@ -56,7 +56,7 @@ Partial Class FormMain
         '
         'ButtonStart
         '
-        Me.ButtonStart.Location = New System.Drawing.Point(137, 105)
+        Me.ButtonStart.Location = New System.Drawing.Point(144, 95)
         Me.ButtonStart.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonStart.Name = "ButtonStart"
         Me.ButtonStart.Size = New System.Drawing.Size(100, 28)
@@ -66,7 +66,7 @@ Partial Class FormMain
         '
         'ButtonReset
         '
-        Me.ButtonReset.Location = New System.Drawing.Point(16, 105)
+        Me.ButtonReset.Location = New System.Drawing.Point(23, 95)
         Me.ButtonReset.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonReset.Name = "ButtonReset"
         Me.ButtonReset.Size = New System.Drawing.Size(100, 28)
