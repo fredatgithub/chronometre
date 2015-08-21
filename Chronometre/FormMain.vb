@@ -17,7 +17,6 @@
 'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 'SOFTWARE.
 Public Class FormMain
-    ' TODO translate menus to English inside the exe
     Dim _chronoStarted As Boolean = False
     Dim _startTime As New Date
     Dim _endTime As New Date
