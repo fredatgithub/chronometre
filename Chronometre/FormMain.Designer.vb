@@ -34,12 +34,12 @@ Partial Class FormMain
         Me.QuitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LanguageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FrenchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerChrono = New System.Windows.Forms.Timer(Me.components)
-        Me.LanguageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FrenchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout
         Me.SuspendLayout
         '
@@ -47,7 +47,7 @@ Partial Class FormMain
         '
         Me.LabelCompteur.AutoSize = true
         Me.LabelCompteur.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.LabelCompteur.Location = New System.Drawing.Point(35, 55)
+        Me.LabelCompteur.Location = New System.Drawing.Point(45, 55)
         Me.LabelCompteur.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelCompteur.Name = "LabelCompteur"
         Me.LabelCompteur.Size = New System.Drawing.Size(171, 22)
@@ -81,7 +81,7 @@ Partial Class FormMain
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(268, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(282, 28)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -98,18 +98,18 @@ Partial Class FormMain
         Me.ResetToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
         Me.ResetToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M),System.Windows.Forms.Keys)
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(175, 26)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
         'toolStripSeparator
         '
         Me.toolStripSeparator.Name = "toolStripSeparator"
-        Me.toolStripSeparator.Size = New System.Drawing.Size(178, 6)
+        Me.toolStripSeparator.Size = New System.Drawing.Size(172, 6)
         '
         'QuitToolStripMenuItem
         '
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
-        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(175, 26)
         Me.QuitToolStripMenuItem.Text = "&Quit"
         '
         'DisplayToolStripMenuItem
@@ -122,8 +122,29 @@ Partial Class FormMain
         'SourceToolStripMenuItem
         '
         Me.SourceToolStripMenuItem.Name = "SourceToolStripMenuItem"
-        Me.SourceToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.SourceToolStripMenuItem.Size = New System.Drawing.Size(129, 26)
         Me.SourceToolStripMenuItem.Text = "&Source"
+        '
+        'LanguageToolStripMenuItem
+        '
+        Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FrenchToolStripMenuItem, Me.EnglishToolStripMenuItem})
+        Me.LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
+        Me.LanguageToolStripMenuItem.Size = New System.Drawing.Size(86, 24)
+        Me.LanguageToolStripMenuItem.Text = "&Language"
+        '
+        'FrenchToolStripMenuItem
+        '
+        Me.FrenchToolStripMenuItem.Name = "FrenchToolStripMenuItem"
+        Me.FrenchToolStripMenuItem.Size = New System.Drawing.Size(131, 26)
+        Me.FrenchToolStripMenuItem.Text = "French"
+        '
+        'EnglishToolStripMenuItem
+        '
+        Me.EnglishToolStripMenuItem.Checked = true
+        Me.EnglishToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
+        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(131, 26)
+        Me.EnglishToolStripMenuItem.Text = "English"
         '
         'HelpToolStripMenuItem
         '
@@ -135,7 +156,7 @@ Partial Class FormMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'TimerChrono
@@ -143,32 +164,11 @@ Partial Class FormMain
         Me.TimerChrono.Enabled = true
         Me.TimerChrono.Interval = 1000
         '
-        'LanguageToolStripMenuItem
-        '
-        Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FrenchToolStripMenuItem, Me.EnglishToolStripMenuItem})
-        Me.LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
-        Me.LanguageToolStripMenuItem.Size = New System.Drawing.Size(86, 24)
-        Me.LanguageToolStripMenuItem.Text = "&Language"
-        '
-        'EnglishToolStripMenuItem
-        '
-        Me.EnglishToolStripMenuItem.Checked = true
-        Me.EnglishToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.EnglishToolStripMenuItem.Text = "English"
-        '
-        'FrenchToolStripMenuItem
-        '
-        Me.FrenchToolStripMenuItem.Name = "FrenchToolStripMenuItem"
-        Me.FrenchToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.FrenchToolStripMenuItem.Text = "French"
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8!, 16!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(268, 151)
+        Me.ClientSize = New System.Drawing.Size(282, 151)
         Me.Controls.Add(Me.LabelCompteur)
         Me.Controls.Add(Me.ButtonStart)
         Me.Controls.Add(Me.ButtonReset)
