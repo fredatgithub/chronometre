@@ -33,7 +33,6 @@ Public Class FormMain
                 Else
                 ButtonStart.Text = "Start"
             End If
-            
         Else
             _chronoStarted = True
             _startTime = Now
