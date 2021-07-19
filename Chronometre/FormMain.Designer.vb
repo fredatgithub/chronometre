@@ -40,39 +40,36 @@ Partial Class FormMain
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerChrono = New System.Windows.Forms.Timer(Me.components)
-        Me.MenuStrip1.SuspendLayout
-        Me.SuspendLayout
+        Me.MenuStrip1.SuspendLayout()
+        Me.SuspendLayout()
         '
         'LabelCompteur
         '
-        Me.LabelCompteur.AutoSize = true
-        Me.LabelCompteur.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.LabelCompteur.Location = New System.Drawing.Point(45, 55)
-        Me.LabelCompteur.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelCompteur.AutoSize = True
+        Me.LabelCompteur.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelCompteur.Location = New System.Drawing.Point(34, 45)
         Me.LabelCompteur.Name = "LabelCompteur"
-        Me.LabelCompteur.Size = New System.Drawing.Size(171, 22)
+        Me.LabelCompteur.Size = New System.Drawing.Size(140, 17)
         Me.LabelCompteur.TabIndex = 5
         Me.LabelCompteur.Text = "00:00:00:0000000"
         '
         'ButtonStart
         '
-        Me.ButtonStart.Location = New System.Drawing.Point(144, 95)
-        Me.ButtonStart.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonStart.Location = New System.Drawing.Point(108, 77)
         Me.ButtonStart.Name = "ButtonStart"
-        Me.ButtonStart.Size = New System.Drawing.Size(100, 28)
+        Me.ButtonStart.Size = New System.Drawing.Size(75, 23)
         Me.ButtonStart.TabIndex = 4
         Me.ButtonStart.Text = "&Start"
-        Me.ButtonStart.UseVisualStyleBackColor = true
+        Me.ButtonStart.UseVisualStyleBackColor = True
         '
         'ButtonReset
         '
-        Me.ButtonReset.Location = New System.Drawing.Point(23, 95)
-        Me.ButtonReset.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonReset.Location = New System.Drawing.Point(17, 77)
         Me.ButtonReset.Name = "ButtonReset"
-        Me.ButtonReset.Size = New System.Drawing.Size(100, 28)
+        Me.ButtonReset.Size = New System.Drawing.Size(75, 23)
         Me.ButtonReset.TabIndex = 6
         Me.ButtonReset.Text = "&Reset"
-        Me.ButtonReset.UseVisualStyleBackColor = true
+        Me.ButtonReset.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
@@ -80,8 +77,7 @@ Partial Class FormMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DisplayToolStripMenuItem, Me.LanguageToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(282, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(230, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -89,100 +85,99 @@ Partial Class FormMain
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetToolStripMenuItem, Me.toolStripSeparator, Me.QuitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(44, 24)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
         '
         'ResetToolStripMenuItem
         '
-        Me.ResetToolStripMenuItem.Image = CType(resources.GetObject("ResetToolStripMenuItem.Image"),System.Drawing.Image)
+        Me.ResetToolStripMenuItem.Image = CType(resources.GetObject("ResetToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ResetToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M),System.Windows.Forms.Keys)
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(175, 26)
+        Me.ResetToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(184, 26)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
         'toolStripSeparator
         '
         Me.toolStripSeparator.Name = "toolStripSeparator"
-        Me.toolStripSeparator.Size = New System.Drawing.Size(172, 6)
+        Me.toolStripSeparator.Size = New System.Drawing.Size(181, 6)
         '
         'QuitToolStripMenuItem
         '
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
-        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(175, 26)
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(184, 26)
         Me.QuitToolStripMenuItem.Text = "&Quit"
         '
         'DisplayToolStripMenuItem
         '
         Me.DisplayToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SourceToolStripMenuItem})
         Me.DisplayToolStripMenuItem.Name = "DisplayToolStripMenuItem"
-        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(70, 24)
+        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
         Me.DisplayToolStripMenuItem.Text = "&Display"
         '
         'SourceToolStripMenuItem
         '
         Me.SourceToolStripMenuItem.Name = "SourceToolStripMenuItem"
-        Me.SourceToolStripMenuItem.Size = New System.Drawing.Size(129, 26)
+        Me.SourceToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
         Me.SourceToolStripMenuItem.Text = "&Source"
         '
         'LanguageToolStripMenuItem
         '
         Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FrenchToolStripMenuItem, Me.EnglishToolStripMenuItem})
         Me.LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
-        Me.LanguageToolStripMenuItem.Size = New System.Drawing.Size(86, 24)
+        Me.LanguageToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.LanguageToolStripMenuItem.Text = "&Language"
         '
         'FrenchToolStripMenuItem
         '
         Me.FrenchToolStripMenuItem.Name = "FrenchToolStripMenuItem"
-        Me.FrenchToolStripMenuItem.Size = New System.Drawing.Size(131, 26)
+        Me.FrenchToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FrenchToolStripMenuItem.Text = "French"
         '
         'EnglishToolStripMenuItem
         '
-        Me.EnglishToolStripMenuItem.Checked = true
+        Me.EnglishToolStripMenuItem.Checked = True
         Me.EnglishToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(131, 26)
+        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EnglishToolStripMenuItem.Text = "English"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "&Help"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'TimerChrono
         '
-        Me.TimerChrono.Enabled = true
+        Me.TimerChrono.Enabled = True
         Me.TimerChrono.Interval = 1000
         '
         'FormMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8!, 16!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(282, 151)
+        Me.ClientSize = New System.Drawing.Size(230, 123)
         Me.Controls.Add(Me.LabelCompteur)
         Me.Controls.Add(Me.ButtonStart)
         Me.Controls.Add(Me.ButtonReset)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormMain"
-        Me.ShowIcon = false
+        Me.ShowIcon = False
         Me.Text = "Chronomètre"
-        Me.MenuStrip1.ResumeLayout(false)
-        Me.MenuStrip1.PerformLayout
-        Me.ResumeLayout(false)
-        Me.PerformLayout
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
-End Sub
+    End Sub
     Friend WithEvents LabelCompteur As System.Windows.Forms.Label
     Friend WithEvents ButtonStart As System.Windows.Forms.Button
     Friend WithEvents ButtonReset As System.Windows.Forms.Button

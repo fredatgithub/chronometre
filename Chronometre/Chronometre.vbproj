@@ -73,6 +73,7 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="DialogViewSource.Designer.vb">
       <DependentUpon>DialogViewSource.vb</DependentUpon>
     </Compile>
