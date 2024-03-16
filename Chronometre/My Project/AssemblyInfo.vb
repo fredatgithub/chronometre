@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Passez en revue les valeurs des attributs de l'assembly
 
-<Assembly: AssemblyTitle("Chronometre")> 
+<Assembly: AssemblyTitle("Chronomètre")> 
 <Assembly: AssemblyDescription("Chronometre is a simple application created by Freddy Juhel on the 20th of October 2008 (French) Chronomètre est une petite application créée par Freddy Juhel le 20 octobre 2008")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("Chronometre")>
-<Assembly: AssemblyCopyright("Freeware Copyright 2008-2021 MIT Freddy Juhel")>
+<Assembly: AssemblyCopyright("Freeware Copyright 2008-2024 MIT Freddy Juhel")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("480")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("200")>  _
         Public Property WindowHeight() As Integer
             Get
                 Return CType(Me("WindowHeight"),Integer)
@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("840")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("200")>  _
         Public Property WindowWidth() As Integer
             Get
                 Return CType(Me("WindowWidth"),Integer)
