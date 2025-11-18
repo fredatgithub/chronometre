@@ -1,5 +1,5 @@
 # chronometre
-A simple clock to time events
+A simple clock to time events created on the 20 of Octoboer 2008 with VB.NET
 
 # License
 [![License status] ("https://img.shields.io/badge/License-MIT License-blue.svg")] (https://github.com/fredatgithub/chronometre#License status)
